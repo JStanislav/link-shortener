@@ -1,7 +1,12 @@
 from flask import Flask
 from config import Config
 
-app = Flask(__name__)
-app.config.from_object(Config)
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(config_class)
 
-from app import routes
+    from app.main import bp
+    app.register_blueprint(bp)
+
+    
+    return app
