@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    {% if form %}
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.input }}</p>
+
+        {{ form.submit }}
+        
+    </form>
+    {% endif %}
+    {% if generated %}
+    <p>{{ generated }}</p>
+        
+    {% endif %}
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+    /*function e(input){
+        document.getElementById('generated').innerText = "asdd"
+    }*/
+
+    /*$(function(){
+        function generate(url){
+            destElem = document.getElementById('generated');
+            console.log("first")
+            $.post('/generate_url', {
+                url: url
+            }).done(function(response){
+                $(destElem).text(response['result'])
+            }).fail(function(){
+                $(destElem).text("Something went wrong.")
+                console.log("no")
+            })
+        }
+    })*/
+    
+
+    /*function exdi(){
+        translate("ccc", document.getElementById("generated"));
+    }*/
+    //document.getElementById("submit").onclick() = alert("smth");
+</script>
+</html>
