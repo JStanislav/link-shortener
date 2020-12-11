@@ -7,3 +7,5 @@ class Config:
     MYSQL_USER = 'root'
     MYSQL_PASSWORD = ''
     MYSQL_DB = 'shortener'
+
+    SERVER_NAME = "127.0.0.1:5000"#change to domain in prod
