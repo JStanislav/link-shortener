@@ -1,7 +1,7 @@
 from app.main import bp
 from app import db
 from flask import render_template, jsonify, redirect, url_for
-from app.main.forms import ShortForm
+from app.main.forms import ShortForm, LinksetCreation
 import random
 from datetime import datetime
 
@@ -87,3 +87,9 @@ def index():
     if form.validate_on_submit():
         return render_template("index.html", form=form, generated=generate_url(form.input.data))
     return render_template("index.html", form=form)
+
+@bp.route('/create_linkset', methods=['GET', 'POST'])
+def create_linkset():
+    form = LinksetCreation()
+    return render_template('create_linkset.html', form=form)
+

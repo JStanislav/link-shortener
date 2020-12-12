@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Linkset</title>
+</head>
+<body>
+    {% if form %}
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.name }}</p>
+        <p>{{ form.title }}</p>
+        <p>{{ form.subtitle }}</p>
+        <p>{{ form.color }}</p>
+        <p>{{ form.submit }}</p>
+    </form>
+    {% endif %}
+</body>
+</html>
